@@ -1,20 +1,20 @@
-/*--Global Styles*/
-* {
+/* --- Global Styles --- */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #4a4a4a; 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #4a4a4a;
     background-color: #ffffff;
     line-height: 1.6;
     padding: 0 2rem;
 }
 
-/*--Header Styles*/
-header{
+/* --- Header --- */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,36 +24,36 @@ header{
     margin: 0 auto;
 }
 
-header .logo{
+header .logo {
     font-size: 1.25rem;
     color: #2c2c2c;
     text-decoration: none;
 }
 
-nav{
+nav {
     display: flex;
     gap: 2rem;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: #555;
     font-weight: 500;
 }
 
-nav a.active{
+nav a.active {
     color: #e06d63;
 }
 
-/*--Main layout*/
-main{
+/* --- Main Layout --- */
+main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 2.5rem 0;
 }
 
-/*--Intro Section--*/
-.intro{
+/* --- Intro Section (Home Page) --- */
+.intro {
     text-align: left;
     margin-bottom: 3rem;
 }
@@ -63,7 +63,7 @@ main{
     height: auto;
     max-height: 450px;
     object-fit: cover;
-    border-radius: 4px; 
+    border-radius: 4px;
     margin-bottom: 2rem;
 }
 
@@ -80,42 +80,23 @@ main{
     letter-spacing: 1.5px;
     color: #666;
     margin-bottom: 1.5rem;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
-.intro p{
+.intro p {
     color: #666;
     max-width: 700px;
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
 }
 
-.button{
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border: 1px solid #e06d63;
-    color: #e06d63;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    font-weight: bold;
-    border-radius: 2px;
-    transition: background 0.2s color 0.2s;
-}
-
-.button:hover{
-    background-color: #e06d63;
-    color: #ffffff;
-}
-
-/*Features Section*/
-#features{
+/* --- Features Section (Home Page) --- */
+#features {
     border-top: 1px solid #e0e0e0;
     padding-top: 3rem;
     margin-top: 3rem;
 }
 
-#features h2{
+#features h2 {
     font-size: 1.75rem;
     color: #2c2c2c;
     margin-bottom: 2rem;
@@ -138,7 +119,7 @@ main{
 }
 
 .feature .icon {
-    font-size: 1.75rem;
+    font-size: 2rem;
     color: #e06d63;
     line-height: 1;
     min-width: 30px;
@@ -152,11 +133,70 @@ main{
 }
 
 .feature p {
-    color: #666;
     font-size: 0.9rem;
+    color: #666;
 }
 
-/*--Footer Styles--*/
+/* --- Projects Section (Projects Page) --- */
+.section-title {
+    font-size: 1.75rem;
+    color: #2c2c2c;
+    margin-bottom: 2rem;
+    font-family: Georgia, serif;
+    border-bottom: 2px solid #e06d63;
+    display: inline-block;
+    padding-bottom: 0.25rem;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 3rem;
+}
+
+.projects article img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.projects article h3 {
+    font-size: 1.25rem;
+    color: #2c2c2c;
+    margin-bottom: 0.5rem;
+    font-family: Georgia, serif;
+}
+
+.projects article p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* --- Buttons --- */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #e06d63;
+    color: #e06d63;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-radius: 2px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.button:hover {
+    background-color: #e06d63;
+    color: #ffffff;
+}
+
+/* --- Footer --- */
 footer {
     max-width: 1100px;
     margin: 0 auto;
@@ -166,12 +206,13 @@ footer {
     color: #888;
 }
 
-/*Responsive Styles*/
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
-    .features {
+    .features,
+    .projects {
         grid-template-columns: 1fr;
     }
-
+    
     body {
         padding: 0 1rem;
     }
